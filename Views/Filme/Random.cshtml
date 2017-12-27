@@ -1,0 +1,24 @@
+﻿@model learnaspnet.ViewModels.FilmeAleatorioViewModel
+
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ var className = Model.Cliente.Count > 0 ? "popular" : null;}
+
+<h2 class="@className"> @foreach(var filme in Model.Filme) { @filme.Nome}</h2>
+
+@if (Model.Cliente.Count ==  0)
+{
+    <p>Ninguem alugou esse filme anteriormente</p>
+}
+else
+{
+    <ul>
+        @foreach (var cliente in Model.Cliente)
+        {
+           <li> @cliente.Nome</li>
+        }
+    </ul>
+}

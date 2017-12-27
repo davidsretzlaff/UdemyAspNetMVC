@@ -1,0 +1,31 @@
+﻿@model learnaspnet.ViewModels.FilmeAleatorioViewModel
+@{
+    ViewBag.Title = "Filmes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.Filme.Count == 0)
+{
+    <p>Não tem filmes cadastrados</p>
+}
+else
+{
+    <table class="table table‐bordered table­‐hover">
+        <thead class="thead-light">
+            <tr>
+                <th>Filmes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var filme in Model.Filme)
+            {
+                <tr>
+                    <td>
+                        @filme.Nome
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<learnaspnet.Models.Cliente>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ <h2>Customers</h2>
+ @if (!Model.Any()){<p> We don't have any customers yet.</p>}
+ else
+ {
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Customer</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var cliente in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(cliente.Nome, "Details", "Cliente", new { id = cliente.IdCliente}, null)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+ }
+

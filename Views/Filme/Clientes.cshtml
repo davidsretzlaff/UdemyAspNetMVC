@@ -1,0 +1,33 @@
+﻿@model learnaspnet.ViewModels.FilmeAleatorioViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Clientes</h2>
+
+@if(Model.Cliente.Count == 0)
+{
+    <p>Não tem clientes cadastrados</p>
+}
+else
+{
+    <table class="table table‐bordered table­‐hover">
+        <thead class="thead-light">
+            <tr>
+                <th>Clientes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cliente in Model.Cliente)
+            {
+                <tr>
+                    <td>
+                        @cliente.Nome
+                    </td>
+                </tr>
+            }
+        </tbody>           
+
+</table>
+}
