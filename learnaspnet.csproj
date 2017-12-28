@@ -207,12 +207,70 @@
     <Compile Include="Migrations\201712262020249_InitialCreate.Designer.cs">
       <DependentUpon>201712262020249_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712272057105_InicialModo.cs" />
+    <Compile Include="Migrations\201712272057105_InicialModo.Designer.cs">
+      <DependentUpon>201712272057105_InicialModo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712272130128_AddCliente.cs" />
+    <Compile Include="Migrations\201712272130128_AddCliente.Designer.cs">
+      <DependentUpon>201712272130128_AddCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712272139099_addTipoMembro.cs" />
+    <Compile Include="Migrations\201712272139099_addTipoMembro.Designer.cs">
+      <DependentUpon>201712272139099_addTipoMembro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712272228326_PopulateTipoMembro.cs" />
+    <Compile Include="Migrations\201712272228326_PopulateTipoMembro.Designer.cs">
+      <DependentUpon>201712272228326_PopulateTipoMembro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712272238386_apliannotationnacliente.cs" />
+    <Compile Include="Migrations\201712272238386_apliannotationnacliente.Designer.cs">
+      <DependentUpon>201712272238386_apliannotationnacliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712281534583_addNomeTipoMembro.cs" />
+    <Compile Include="Migrations\201712281534583_addNomeTipoMembro.Designer.cs">
+      <DependentUpon>201712281534583_addNomeTipoMembro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712281543551_addDataNascimentoCliente.cs" />
+    <Compile Include="Migrations\201712281543551_addDataNascimentoCliente.Designer.cs">
+      <DependentUpon>201712281543551_addDataNascimentoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712281557425_addDataNascimentoClientenovo.cs" />
+    <Compile Include="Migrations\201712281557425_addDataNascimentoClientenovo.Designer.cs">
+      <DependentUpon>201712281557425_addDataNascimentoClientenovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712281623323_addGeneroandDatasFilmes.cs" />
+    <Compile Include="Migrations\201712281623323_addGeneroandDatasFilmes.Designer.cs">
+      <DependentUpon>201712281623323_addGeneroandDatasFilmes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712281631018_genero.cs" />
+    <Compile Include="Migrations\201712281631018_genero.Designer.cs">
+      <DependentUpon>201712281631018_genero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712281631512_addGenero.cs" />
+    <Compile Include="Migrations\201712281631512_addGenero.Designer.cs">
+      <DependentUpon>201712281631512_addGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712281634142_addGenero2.cs" />
+    <Compile Include="Migrations\201712281634142_addGenero2.Designer.cs">
+      <DependentUpon>201712281634142_addGenero2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712281643166_addGenero4.cs" />
+    <Compile Include="Migrations\201712281643166_addGenero4.Designer.cs">
+      <DependentUpon>201712281643166_addGenero4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712281644034_populateGenero.cs" />
+    <Compile Include="Migrations\201712281644034_populateGenero.Designer.cs">
+      <DependentUpon>201712281644034_populateGenero.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Filme.cs" />
+    <Compile Include="Models\Genero.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\TipoMembro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\FilmeAleatorioViewModel.cs" />
@@ -284,6 +342,7 @@
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Cliente\Details.cshtml" />
     <Content Include="Views\Filme\Index.cshtml" />
+    <Content Include="Views\Filme\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -299,6 +358,48 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712262020249_InitialCreate.resx">
       <DependentUpon>201712262020249_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712272057105_InicialModo.resx">
+      <DependentUpon>201712272057105_InicialModo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712272130128_AddCliente.resx">
+      <DependentUpon>201712272130128_AddCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712272139099_addTipoMembro.resx">
+      <DependentUpon>201712272139099_addTipoMembro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712272228326_PopulateTipoMembro.resx">
+      <DependentUpon>201712272228326_PopulateTipoMembro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712272238386_apliannotationnacliente.resx">
+      <DependentUpon>201712272238386_apliannotationnacliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712281534583_addNomeTipoMembro.resx">
+      <DependentUpon>201712281534583_addNomeTipoMembro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712281543551_addDataNascimentoCliente.resx">
+      <DependentUpon>201712281543551_addDataNascimentoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712281557425_addDataNascimentoClientenovo.resx">
+      <DependentUpon>201712281557425_addDataNascimentoClientenovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712281623323_addGeneroandDatasFilmes.resx">
+      <DependentUpon>201712281623323_addGeneroandDatasFilmes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712281631018_genero.resx">
+      <DependentUpon>201712281631018_genero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712281631512_addGenero.resx">
+      <DependentUpon>201712281631512_addGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712281634142_addGenero2.resx">
+      <DependentUpon>201712281634142_addGenero2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712281643166_addGenero4.resx">
+      <DependentUpon>201712281643166_addGenero4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712281644034_populateGenero.resx">
+      <DependentUpon>201712281644034_populateGenero.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

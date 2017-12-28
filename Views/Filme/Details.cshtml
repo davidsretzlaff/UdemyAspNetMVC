@@ -1,0 +1,17 @@
+﻿@model learnaspnet.Models.Filme
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhes</h2>
+<h2>@Model.Nome</h2>
+
+<ul>
+    <li>Genero: @Model.Genero.Nome</li>
+    <li>Data Lançamento: @Model.DataLancamento.ToLongDateString()</li>
+    <li>Data Adcionada: @Model.DataAdicionada.ToLongDateString()</li>
+    <li>Numero em estoque: @Model.NumeroEstoque</li>
+</ul>
+

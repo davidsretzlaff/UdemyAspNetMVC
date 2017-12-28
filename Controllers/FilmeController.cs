@@ -5,20 +5,32 @@ using System.Web;
 using System.Web.Mvc;
 using learnaspnet.Models;
 using learnaspnet.ViewModels;
+using System.Data.Entity;
 
 namespace learnaspnet.Controllers
 {
     public class FilmeController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public FilmeController()
+        {
+            _context = new ApplicationDbContext();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
         // GET: Filme
         public ViewResult Index()
         {
-            var filmes = GetFilmes();
+            var filmes = _context.Filme.Include(x => x.Genero).ToList();
             return View(filmes);
         }
         public ActionResult Details(int id)
         {
-            var filme = GetFilmes().SingleOrDefault(c => c.IdFilme == id);
+            var filme = _context.Filme.Include(x => x.Genero).SingleOrDefault(c => c.Id == id);
 
             if (filme == null)
                 return HttpNotFound();
@@ -26,14 +38,6 @@ namespace learnaspnet.Controllers
             return View(filme);
         }
 
-        public IEnumerable<Filme> GetFilmes()
-        {
-            return new List<Filme>
-            {
-                 new Filme { IdFilme = 1, Nome = "Extraordinario" },
-                 new Filme { IdFilme = 2, Nome = "Rock Marlboro" }
-            };
 
-        }
     }
 }

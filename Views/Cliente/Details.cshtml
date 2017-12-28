@@ -8,4 +8,10 @@
 <h2>Detalhes</h2>
 
 <h2>@Model.Nome</h2>
-
+<ul>
+    <li>Tipo Membro: @Model.TipoMembro.Nome</li>
+    @if (Model.DataNascimento.HasValue)
+    {
+        <li>Data nascimento: @Model.DataNascimento.Value.ToShortDateString()</li>
+    }
+</ul>

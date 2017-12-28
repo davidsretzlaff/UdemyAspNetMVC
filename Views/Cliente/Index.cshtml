@@ -11,14 +11,16 @@
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                <th>Customer</th>
+                <th>Cliente</th>
+                <th>Taxa de membro</th>
             </tr>
         </thead>
         <tbody>
-            @foreach(var cliente in Model)
+            @foreach (var cliente in Model)
             {
                 <tr>
-                    <td>@Html.ActionLink(cliente.Nome, "Details", "Cliente", new { id = cliente.IdCliente}, null)</td>
+                    <td>@Html.ActionLink(cliente.Nome, "Details", "Cliente", new { id = cliente.IdCliente }, null)</td>
+                    <th>@cliente.TipoMembro.Nome</th>
                 </tr>
             }
         </tbody>

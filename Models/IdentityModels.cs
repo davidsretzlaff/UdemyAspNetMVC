@@ -20,6 +20,9 @@ namespace learnaspnet.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Filme> Filme { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
